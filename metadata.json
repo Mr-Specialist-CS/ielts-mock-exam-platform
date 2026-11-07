@@ -1,0 +1,6 @@
+{
+  "name": "IELTS Gate Mock Exam Platform",
+  "description": "Master IELTS mock exam platform featuring secure lockdown, Listening/Reading/Writing engine, AI-assisted writing band grading with human-in-the-loop review, and verified TRF report generation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

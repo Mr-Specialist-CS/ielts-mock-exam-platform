@@ -1,0 +1,36 @@
+{
+	"name": "igmock",
+	"main": "src/worker.ts",
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "ielts-gate-prod",
+			"database_id": "5bd12e4b-1626-4f1b-8767-5ae529587b1a"
+		},
+		{
+			"binding": "ielts_gate_prod",
+			"database_name": "ielts-gate-prod",
+			"database_id": "5bd12e4b-1626-4f1b-8767-5ae529587b1a"
+		}
+	],
+	"r2_buckets": [
+		{
+			"binding": "FILES",
+			"bucket_name": "ielts-gate-files"
+		}
+	], 	"compatibility_date": "2026-03-01",
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
+	"triggers": {
+		"crons": ["0 2 * * *"]
+	},
+	"assets": {
+		"directory": "./dist",
+		"binding": "ASSETS",
+		"not_found_handling": "single-page-application",
+		"run_worker_first": [
+			"/api/*"
+		]
+	}
+}

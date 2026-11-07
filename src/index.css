@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary: #f97316;
+    --primary-hover: #ea580c;
+    --primary-active: #c2410c;
+    --primary-light: #fff7ed;
+    --primary-border: #fed7aa;
+  }
+
+  ::selection {
+    background-color: #ffedd5;
+    color: #c2410c;
+  }
+}
+
+/* Custom scrollbars with bright orange accent */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fdba74;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fb923c;
+}
+
+/* Subtle pulse glow for proctor status and recording */
+@keyframes orange-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(249, 115, 22, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(249, 115, 22, 0.6);
+  }
+}
+
+.animate-orange-glow {
+  animation: orange-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
